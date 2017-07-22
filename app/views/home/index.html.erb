@@ -1,2 +1,24 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div>
+  <div>
+    <ul id="chats-list">
+      <% @chats.each do |chat| %>
+        <%= render 'chats/chat', chat: chat, user: current_user %>
+      <% end %>
+    </ul>
+  </div>
+
+  <div>
+    <div>
+      <div>
+        <h3>User list</h3>
+      </div>
+      <div id="panel-body">
+        <ul>
+          <% @users.each do |user| %>
+            <li><%= link_to user.email, chats_path(user_id: user), remote: true, method: :post %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

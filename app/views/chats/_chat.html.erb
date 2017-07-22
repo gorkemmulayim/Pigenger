@@ -1,0 +1,16 @@
+<li>
+  <div data-chat-id="<%= chat.id %>">
+    <div>
+      <%= link_to chat.opposed_user(user).email, '' %>
+      <%= link_to "x", '' %>
+    </div>
+
+    <div id="panel-body" style="display: none;">
+      <div id="messages-list">
+        <ul>
+          <%= render 'chats/chat_content', messages: chat.messages, user: user %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</li>
