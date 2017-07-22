@@ -73,13 +73,7 @@ with the following command:
 sudo ln -s "$(which nodejs)" /usr/bin/node
 ```
 
-<b>5. Install Rails</b>
-
-```
-gem install rails
-```
-
-<b>6. Optional Dependencies</b>
+<b>5. Optional Dependencies</b>
 
 If the `bundler install` command behaves funny or crashes see if installing below packages works:
 ```
