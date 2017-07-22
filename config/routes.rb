@@ -3,7 +3,11 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :chats, only: [:create]
+  resources :chats, only: [:create] do
+    member do
+      post :close
+    end
+  end
 
   root 'home#index'
 end

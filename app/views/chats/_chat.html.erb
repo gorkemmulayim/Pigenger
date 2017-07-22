@@ -1,8 +1,8 @@
 <li>
-  <div data-chat-id="<%= chat.id %>">
+  <div id="panel panel-default" data-chat-id="<%= chat.id %>">
     <div>
-      <%= link_to chat.opposed_user(user).email, '' %>
-      <%= link_to "x", '' %>
+      <%= link_to chat.opposed_user(user).email, '', id: 'toggle-window' %>
+      <%= link_to "x", close_chat_path(chat), remote: true, method: :post %>
     </div>
 
     <div id="panel-body" style="display: none;">
