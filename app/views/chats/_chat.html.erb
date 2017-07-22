@@ -11,6 +11,11 @@
           <%= render 'chats/chat_content', messages: chat.messages, user: user %>
         </ul>
       </div>
+      <%= form_for [chat, chat.messages.new], remote: true do |f| %>
+        <%= f.hidden_field :user_id, value: user.id %>
+        <%= f.text_area :body, class: "form-control" %>
+        <%= f.submit "Send", class: "btn btn-success" %>
+      <% end %>
     </div>
   </div>
 </li>
