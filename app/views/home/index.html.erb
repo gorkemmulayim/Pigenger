@@ -1,8 +1,10 @@
 <div class="row">
   <div class="col-md-9">
     <ul id="chats-list">
-      <% @chats.each do |chat| %>
-        <%= render 'chats/chat', chat: chat, user: current_user %>
+      <% if @chats %>
+        <% @chats.each do |chat| %>
+          <%= render 'chats/chat', chat: chat, user: current_user %>
+        <% end %>
       <% end %>
     </ul>
   </div>
