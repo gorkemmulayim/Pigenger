@@ -5,7 +5,9 @@ Web based chat application: https://pigenger.herokuapp.com/
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-<b>1. Install rbenv and ruby-build</b>
+### Prerequisites
+
+**1. Install rbenv and ruby-build**
 
 ```
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
@@ -39,7 +41,7 @@ rbenv ()
 }
 ```
 
-<b>2. Install Ruby</b>
+**2. Install Ruby**
 
 ``` 
 rbenv install 2.4.1
@@ -54,14 +56,14 @@ Your output to the above command should look something like this:
 ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-linux]
 ```
 
-<b>3. Install Bundler</b>
+**3. Install Bundler**
 
 We will also install the bundler gem to manage application dependencies:
 ```
 gem install bundler
 ```
 
-<b>4. Install Node.js</b>
+**4. Install Node.js**
 
 A few Rails features depend on a JavaScript Runtime.
 ```
@@ -73,10 +75,20 @@ with the following command:
 sudo ln -s "$(which nodejs)" /usr/bin/node
 ```
 
-<b>5. Optional Dependencies</b>
+**5. Installing Gem Dependencies**
 
-If the `bundler install` command behaves funny or crashes see if installing below packages works:
+Install required gems via `bundler install` command. Just give it a while.
+
+*Note: If the `bundler install` command behaves funny or crashes see if installing below packages works:*
 ```
 sudo apt install libsqlite3-dev
 sudo apt install libpq-dev
 ```
+
+### Running
+
+In the root of the project directory, execute the below command:
+```
+rails server
+```
+then the Pigenger will be running at localhost:3000
