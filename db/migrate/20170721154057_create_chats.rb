@@ -1,11 +1,10 @@
 class CreateChats < ActiveRecord::Migration[5.1]
   def change
     create_table :chats do |t|
-      t.integer :recipient_id
-      t.integer :sender_id
+      t.references :recipient, references: :user
+      t.references :sender, references: :user
 
       t.timestamps
     end
-    add_index :chats, [:recipient_id, :sender_id], unique: true
   end
 end

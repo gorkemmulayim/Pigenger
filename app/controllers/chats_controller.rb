@@ -20,7 +20,6 @@ class ChatsController < ApplicationController
   end
 
   private
-
   def add_to_chats
     session[:chats] ||= []
     session[:chats] << @chat.id
