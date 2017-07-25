@@ -89,6 +89,7 @@ sudo service postgresql restart
 sudo su - postgres
 psql
 create role <username> with createdb login password '<password>';
+create database pigenger;
 \q
 exit
 sudo service postgresql restart
