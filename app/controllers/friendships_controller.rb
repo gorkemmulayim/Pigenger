@@ -5,7 +5,7 @@ class FriendshipsController < ApplicationController
       flash[:notice] = "Added friend."
       redirect_to root_url
     else
-      flash[:error] = "Unable to add friend."
+      flash[:error] = "Friend already exists."
       redirect_to root_url
     end
   end
@@ -13,7 +13,7 @@ class FriendshipsController < ApplicationController
   def destroy
     @friendship = current_user.friendships.find(params[:id])
     @friendship.destroy
-    flash[:notice] = "Removed friendship."
+    flash[:notice] = "Removed friend."
     redirect_to current_user
   end
 end

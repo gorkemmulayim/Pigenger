@@ -7,4 +7,5 @@ class CreateFriendships < ActiveRecord::Migration[5.1]
       t.timestamps
     end
   end
+  add_index :table_name, [:user, :friend], unique: true
 end
