@@ -67,15 +67,34 @@ gem install bundler
 
 A few Rails features depend on a JavaScript Runtime.
 ```
-sudo apt-get install nodejs
+sudo apt install nodejs
 ```
 Rails requires 'node' package for running which is deprecated. We will create a symbolic link to direct nodejs to node
 with the following command:
 ```
 sudo ln -s "$(which nodejs)" /usr/bin/node
 ```
+**5. Install PostgreSQL***
 
-**5. Installing Gem Dependencies**
+Install PostgreSQL with the below command:
+
+```
+sudo apt install postgresql
+```
+
+then configure:
+
+```
+sudo service postgresql restart
+sudo su - postgres
+psql
+create role <username> with createdb login password '<password>';
+\q
+exit
+sudo service postgresql restart
+```
+
+**6. Installing Gem Dependencies**
 
 Install required gems via `bundler install` command. Just give it a while.
 
