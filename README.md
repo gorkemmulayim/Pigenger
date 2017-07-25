@@ -107,6 +107,11 @@ sudo apt install libpq-dev
 
 ### Running
 
+If you are running the server for the first time, you need to initialize database:
+```
+rails db:setup
+```
+
 In the root of the project directory, execute the below command:
 ```
 rails server
