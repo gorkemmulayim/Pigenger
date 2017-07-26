@@ -74,7 +74,7 @@ Rails requires 'node' package for running which is deprecated. We will create a 
 sudo ln -s "$(which nodejs)" /usr/bin/node
 ```
 
-**5. Install PostgreSQL***
+**5. Install PostgreSQL**
 
 Install PostgreSQL with the below command:
 
