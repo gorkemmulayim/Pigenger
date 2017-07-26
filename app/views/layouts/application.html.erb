@@ -18,11 +18,17 @@
 		        <span class="icon-bar"></span>
 		      </button>
 		      <a class="navbar-brand" href="/">Pigenger</a>
-				</div>
-				<div id="navbar" class="navbar-collapse collapse">
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <% if current_user %>
+                <%= current_user.email %> <span class="caret"></span>
+              <% else %>
+                Profile <span class="caret"></span>
+              <% end %>
+              </a>
               <ul class="dropdown-menu">
                 <% if user_signed_in? %>
                   <li><%= link_to "Edit profile", edit_user_registration_path %></li>

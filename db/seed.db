@@ -1,0 +1,23 @@
+User.create(
+  email: "gmulayim@etu.edu.tr",
+  password: "123456",
+  password_confirmation: "123456"
+)
+
+User.create(
+  email: "fkizilkaya@etu.edu.tr",
+  password: "123456",
+  password_confirmation: "123456"
+)
+
+User.create(
+  email: "emtemizkan@etu.edu.tr",
+  password: "123456",
+  password_confirmation: "123456"
+)
+
+User.create(
+  email: "bdemirbilek@etu.edu.tr",
+  password: "123456",
+  password_confirmation: "123456"
+)
