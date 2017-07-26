@@ -69,11 +69,11 @@ A few Rails features depend on a JavaScript Runtime.
 ```
 sudo apt install nodejs
 ```
-Rails requires 'node' package for running which is deprecated. We will create a symbolic link to direct nodejs to node
-with the following command:
+Rails requires 'node' package for running which is deprecated. We will create a symbolic link to direct nodejs to node with the following command:
 ```
 sudo ln -s "$(which nodejs)" /usr/bin/node
 ```
+
 **5. Install PostgreSQL***
 
 Install PostgreSQL with the below command:
@@ -99,15 +99,14 @@ sudo service postgresql restart
 
 Install required gems via `bundler install` command. Just give it a while.
 
-*Note: If the `bundler install` command behaves funny or crashes see if installing below packages works:*
+*Note: If the `bundler install` command behaves funny or crashes see if installing below package works:*
 ```
-sudo apt install libsqlite3-dev
 sudo apt install libpq-dev
 ```
 
 ### Running
 
-If you are running the server for the first time, you need to initialize database:
+If you are running the server for the first time, you need to initialize the database:
 ```
 rails db:setup
 ```
@@ -117,3 +116,7 @@ In the root of the project directory, execute the below command:
 rails server
 ```
 then the Pigenger will be running at localhost:3000
+
+### Cloud9
+
+Running from command line is good and fine and some enjoy simply working in a plain text editor. For those preferring a full integrated development environment(IDE) we recommend [Cloud9](https://c9.io/), but you'll need to figure out some details there yourself.
